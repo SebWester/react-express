@@ -1,29 +1,14 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import Header from "./components/header/Header";
+import MainContent from "./components/main/MainContent";
+import Footer from "./components/footer/Footer";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    const fetchMessage = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/api/hello");
-        const data = await response.json();
-
-        console.log(data);
-        setMessage(data.message);
-      } catch (err) {
-        console.log("Something went wrong:", err);
-      }
-    };
-
-    fetchMessage();
-  }, []);
-
   return (
     <>
-      <div>
-        <h1>{message}</h1>
-      </div>
+      <Header />
+      <MainContent />
+      <Footer />
     </>
   );
 }
