@@ -8,7 +8,7 @@ const MainContent = () => {
   const [count, setCount] = useState(0);
 
   function changeComps() {
-    setCount((prevCount) => (prevCount >= 1 ? 0 : prevCount + 1));
+    setCount((prevCount) => (prevCount >= 1 ? 0 : 1));
   }
 
   useEffect(() => {
