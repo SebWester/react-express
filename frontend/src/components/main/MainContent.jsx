@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import TestFetch from "./TestFetch";
 
 const MainContent = () => {
   const [message, setMessage] = useState("");
@@ -23,6 +24,7 @@ const MainContent = () => {
   return (
     <div className="main-content">
       <h1>{message}</h1>
+      <TestFetch />
     </div>
   );
 };
