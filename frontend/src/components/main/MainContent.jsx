@@ -1,9 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import TestFetch from "./TestFetch";
+import Button from "./sub-comps/Button";
 
 const MainContent = () => {
   const [message, setMessage] = useState("");
+  const [count, setCount] = useState(0);
+
+  function changeComps() {
+    setCount((prevCount) => (prevCount >= 1 ? 0 : prevCount + 1));
+  }
 
   useEffect(() => {
     const fetchMessage = async () => {
@@ -23,8 +29,9 @@ const MainContent = () => {
 
   return (
     <div className="main-content">
-      <h1>{message}</h1>
-      <TestFetch />
+      {count === 0 ? <h1>{message}</h1> : <TestFetch />}
+
+      <Button onClick={changeComps} />
     </div>
   );
 };

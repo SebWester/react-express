@@ -34,6 +34,26 @@ body {
   align-content: center;
 }
 
+.comp-button {
+  margin-top: 10px;
+  border: 1px solid rgba(245, 245, 245, 0.4);
+  border-radius: 10px;
+  font-size: 1.1em;
+  width: fit-content;
+  padding: 2px;
+  background-color: transparent;
+  color: aquamarine;
+}
+
+.comp-button:hover {
+  background-color: rgba(211, 211, 211, 0.3);
+  cursor: pointer;
+}
+
+.comp-button:active {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
 .footer {
   padding: 5px;
   text-align: center;

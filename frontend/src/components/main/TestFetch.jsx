@@ -20,7 +20,7 @@ const TestFetch = () => {
   return (
     <div>
       {error && <p>{error}</p>}
-      <h3>{data}</h3>
+      <h1>{data}</h1>
     </div>
   );
 };
