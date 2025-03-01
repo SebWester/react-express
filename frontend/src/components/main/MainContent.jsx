@@ -14,7 +14,7 @@ const MainContent = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/hello");
+        const response = await fetch("/api/hello");
         const data = await response.json();
 
         console.log(data);

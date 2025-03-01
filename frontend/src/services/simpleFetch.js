@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/test";
+const API_URL = "api/test";
 
 export const fetchData = async () => {
   try {
