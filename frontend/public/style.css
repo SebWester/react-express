@@ -41,17 +41,31 @@ body {
   font-size: 1.1em;
   width: fit-content;
   padding: 2px;
-  background-color: transparent;
-  color: aquamarine;
+  color: aqua;
+  background: linear-gradient(300deg, darkgrey, black, lightgrey);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
 }
 
 .comp-button:hover {
-  background-color: rgba(211, 211, 211, 0.3);
   cursor: pointer;
+  color: aquamarine;
 }
 
-.comp-button:active {
-  background-color: rgba(211, 211, 211, 0.5);
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.clock-div {
+  margin-top: 45px;
 }
 
 .footer {

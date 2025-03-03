@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import TestFetch from "./TestFetch";
 import Button from "./sub-comps/Button";
+import Clock from "./sub-comps/Clock";
 
 const MainContent = () => {
   const [message, setMessage] = useState("");
@@ -32,6 +33,7 @@ const MainContent = () => {
       {count === 0 ? <h1>{message}</h1> : <TestFetch />}
 
       <Button onClick={changeComps} />
+      <Clock />
     </div>
   );
 };
